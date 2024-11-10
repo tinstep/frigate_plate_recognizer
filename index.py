@@ -198,6 +198,7 @@ def send_mqtt_message(plate_number, plate_score, frigate_event_id, after_data, f
         return
 
     if watched_plate:
+        time.sleep(5)
         message = {
             'plate_number': str(watched_plate).upper(),
             'score': plate_score,
